@@ -1,4 +1,5 @@
-![Computer Vision Examples](https://raw.githubusercontent.com/example-user/computer-vision-repo/main/images/computer-vision-examples-article-scaled-1200x628.jpg)
+
+![tinywow_istockphoto-1493495125-1024x1024_51880189](https://github.com/Shawon5030/Computer-Vision/assets/149573785/c1623dcc-6888-42a7-8dab-f5fdd5a10db4)
 
 <!DOCTYPE html>
 <html lang="en">
