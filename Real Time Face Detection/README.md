@@ -19,8 +19,8 @@
 <h2>Contributions:</h2>
 <p>Contributions, bug fixes, and improvements are welcome! Fork this repository, make your changes, and submit a pull request.</p>
 
-<h2>License:</h2>
-<p>This project is licensed under the <a href="link-to-license">MIT License</a>.</p>
-
 <h2>Author:</h2>
-<p><a href="link-to-profile">Your Name</a></p>
+<h6>Mahmudul Haque Shawon:</h6>
+<p><a href="https://www.linkedin.com/in/mahmudulhaque600/">Linkedin</a></p>
+<p><a href="https://web.facebook.com/profile.php?id=100076803278386">Facebook</a></p>
+<p><a href="haquemahmudul600@gmail.com">Gmail</a></p>
