@@ -1,4 +1,7 @@
+
+![Screenshot (28)](https://github.com/Shawon5030/Computer-Vision/assets/149573785/45464fa0-b0a4-47f6-8a96-e04c8f34d42a)
 <h1>Real-Time Face Detection using OpenCV and Mediapipe</h1>
+
 
 <p>This project implements real-time face detection using OpenCV and Mediapipe. It captures video from the default camera, detects faces, and draws bounding boxes around them in real-time.</p>
 
