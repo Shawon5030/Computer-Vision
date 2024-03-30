@@ -1,3 +1,5 @@
+![Computer Vision Examples](https://raw.githubusercontent.com/example-user/computer-vision-repo/main/images/computer-vision-examples-article-scaled-1200x628.jpg)
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
