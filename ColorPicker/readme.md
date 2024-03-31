@@ -29,3 +29,10 @@
 </ol>
 
 <p>This color picker interface provides a simple way to interactively adjust colors and visualize their effects.</p>
+
+<h2>Author:</h2>
+<h6>Mahmudul Haque Shawon:</h6>
+<p><a href="https://www.linkedin.com/in/mahmudulhaque600/">Linkedin</a></p>
+<p><a href="https://web.facebook.com/profile.php?id=100076803278386">Facebook</a></p>
+<p><a href="haquemahmudul600@gmail.com">Gmail</a></p>
+
