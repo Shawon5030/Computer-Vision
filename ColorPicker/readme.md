@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/Made%20with-OpenCV-9cf.svg" alt="Made with OpenCV">
   <img src="https://img.shields.io/badge/Made%20with-Numpy-blue.svg" alt="Made with Numpy">
 </p>
+![Screenshot (31)](https://github.com/Shawon5030/Computer-Vision/assets/149573785/1d03f106-40fa-44c6-82ac-86ea6ea33893)
 
 <!-- Explanation of how the code works -->
 <h2>How it Works</h2>
