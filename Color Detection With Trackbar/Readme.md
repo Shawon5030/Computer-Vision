@@ -1,3 +1,5 @@
+
+
 <h1 align="center">Real-time HSV Color Thresholding using OpenCV</h1>
 
 <p align="center">
@@ -5,6 +7,34 @@
   <img src="https://img.shields.io/badge/Made%20with-OpenCV-9cf.svg" alt="Made with OpenCV">
   <img src="https://img.shields.io/badge/Made%20with-Numpy-blue.svg" alt="Made with Numpy">
 </p>
+
+This Python script enables real-time color thresholding in the HSV color space using OpenCV. Users can interactively adjust lower and upper HSV thresholds using trackbars to filter out specific colors from an input image.
+
+
+## Examples
+
+<div align="center">
+  <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/94fe8ff4-e2c3-4725-af55-0bda514ac7fe" width="200" height="200">
+  <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/d9a3b633-063f-4836-971b-f8951cc1f03c" width="200" height="200">
+  <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/cf6907c8-8216-4faa-85f8-649a692bc164" width="200" height="200">
+  <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/57cc3e3e-c93b-488f-ae22-0b0e4725c55d" width="200" height="200">
+</div>
+
+## How it Works
+
+The script utilizes the OpenCV library to perform real-time color thresholding in the HSV (Hue, Saturation, Value) color space. For a detailed explanation, refer to the [How it Works](#how-it-works) section in the code repository.
+
+## Requirements
+
+- Python 3.x
+- OpenCV
+- Numpy
+
+## Installation
+
+
+
+
 
 <h2>How it Works</h2>
 <p>The script utilizes the OpenCV library to perform real-time color thresholding in the HSV (Hue, Saturation, Value) color space. Here's a step-by-step explanation of its functionality:</p>
