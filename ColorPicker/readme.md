@@ -1,4 +1,10 @@
-<!-- HTML code for README.md -->
+<h1 align="center">Color Picker</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python">
+  <img src="https://img.shields.io/badge/Made%20with-OpenCV-9cf.svg" alt="Made with OpenCV">
+  <img src="https://img.shields.io/badge/Made%20with-Numpy-blue.svg" alt="Made with Numpy">
+</p>
 
 <!-- Explanation of how the code works -->
 <h2>How it Works</h2>
