@@ -1,76 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-time HSV Color Thresholding using OpenCV</title>
-</head>
-<body>
-    <h1 align="center">Real-time HSV Color Thresholding using OpenCV</h1>
+<h1 align="center">Contour detection using webcam</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python">
+  <img src="https://img.shields.io/badge/Made%20with-OpenCV-9cf.svg" alt="Made with OpenCV">
+  <img src="https://img.shields.io/badge/Made%20with-Numpy-blue.svg" alt="Made with Numpy">
 
-    <p align="center">
-        <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python">
-        <img src="https://img.shields.io/badge/Made%20with-OpenCV-9cf.svg" alt="Made with OpenCV">
-        <img src="https://img.shields.io/badge/Made%20with-Numpy-blue.svg" alt="Made with Numpy">
-    </p>
 
-    <p align="center">This Python script enables real-time color thresholding in the HSV color space using OpenCV. Users can interactively adjust lower and upper HSV thresholds using trackbars to filter out specific colors from an input image.</p>
+</p>
+This Python script enables real-time color thresholding in the HSV color space using OpenCV. It utilizes trackbars to adjust the lower and upper HSV thresholds, allowing users to filter out specific colors from the webcam feed.
 
-    <h2 align="center">Examples</h2>
+## Examples
 
-    <div align="center">
-        <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/94fe8ff4-e2c3-4725-af55-0bda514ac7fe" width="200" height="200">
-        <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/d9a3b633-063f-4836-971b-f8951cc1f03c" width="200" height="200">
-        <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/cf6907c8-8216-4faa-85f8-649a692bc164" width="200" height="200">
-        <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/57cc3e3e-c93b-488f-ae22-0b0e4725c55d" width="200" height="200">
-    </div>
+<div align="center">
+  <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/152bd882-10a0-4eb1-9ace-678ac8563300" width="200" height="200">
+  <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/579ac9bf-b1c3-4f49-be2d-84cbbb82b708" width="200" height="200">
 
-    <h2 align="center">How it Works</h2>
+</div>
+## Functionality Overview
 
-    <p align="center">The script utilizes the OpenCV library to perform real-time color thresholding in the HSV (Hue, Saturation, Value) color space. For a detailed explanation, refer to the <a href="#how-it-works">How it Works</a> section in the code repository.</p>
+1. **Webcam Capture:** The script captures frames from the webcam in real-time.
+2. **Trackbars Creation:** Trackbars are created to adjust the lower and upper thresholds for HSV values.
+3. **Color Thresholding:** The input frame is converted to the HSV color space, and a binary mask is created based on the specified HSV thresholds.
+4. **Contour Detection:** Contours are detected in the thresholded image to identify shapes and objects.
+5. **Visualization:** The original frame with contours drawn and the thresholded image are displayed in separate windows.
+6. **User Interaction:** Users can adjust the trackbars in real-time to fine-tune the color filtering process.
 
-    <h2 align="center">Requirements</h2>
+This approach provides a simple yet effective means of visually isolating specific colors from an input image in real-time.
 
-    <ul>
-        <li>Python 3.x</li>
-        <li>OpenCV</li>
-        <li>Numpy</li>
-    </ul>
+## How it Works
 
-    <h2 align="center">Installation</h2>
+The script consists of a main loop that continuously reads frames from the webcam, processes them, and displays the results. Here's a simplified breakdown of the code:
 
-    <ol>
-        <li>Clone the repository.</li>
-        <li>Make sure you have Python 3.x installed on your system.</li>
-        <li>Install OpenCV and Numpy using pip:</li>
-    </ol>
+```python
+# Import required libraries
+import cv2
+import numpy as np
 
-    <pre><code>pip install opencv-python numpy</code></pre>
+# Open webcam
+cap = cv2.VideoCapture(0)
 
-    <h2 align="center">How it Works</h2>
-    <p>The script utilizes the OpenCV library to perform real-time color thresholding in the HSV (Hue, Saturation, Value) color space. Here's a step-by-step explanation of its functionality:</p>
+# Function to do nothing
+def nothing(x):
+    pass
 
-    <ol>
-        <li><strong>Input Image:</strong> The script reads an input image from the file system.</li>
-        <li><strong>Trackbars Creation:</strong> It creates trackbars for adjusting the lower and upper thresholds of the HSV color space. These trackbars allow users to dynamically adjust the filtering criteria for isolating specific colors.</li>
-        <li><strong>HSV Conversion:</strong> The input image is converted from the BGR color space to the HSV color space using the <code>cv2.cvtColor()</code> function. This conversion is necessary because the HSV color space is more suitable for color thresholding tasks.</li>
-        <li><strong>Thresholding:</strong> The script continuously updates the HSV image, mask, and resulting image based on the threshold values adjusted using the trackbars. It uses the <code>cv2.inRange()</code> function to create a binary mask that isolates pixels within the specified HSV range.</li>
-        <li><strong>Bitwise AND Operation:</strong> The binary mask obtained from thresholding is applied to the original input image using the <code>cv2.bitwise_and()</code> function. This operation retains only those pixels from the original image that fall within the specified HSV range, effectively filtering out unwanted colors.</li>
-        <li><strong>Real-time Visualization:</strong> Throughout the process, the script displays the HSV image, mask, and resulting image in separate windows using <code>cv2.imshow()</code>. Users can observe the effects of adjusting the trackbars in real-time.</li>
-        <li><strong>User Interaction:</strong> The script waits for the user to press the 'q' key to exit the loop and terminate the program. This allows users to adjust the thresholds until they achieve the desired color segmentation.</li>
-    </ol>
+# Create trackbars for adjusting threshold values
+cv2.namedWindow('Color Adjustments', cv2.WINDOW_NORMAL)
+cv2.createTrackbar('Thresh', 'Color Adjustments', 0, 255, nothing)
+# Create trackbars for adjusting lower and upper HSV values
+# ...
 
-    <p>This approach provides a simple yet effective means of visually isolating specific colors from an input image in real-time.</p>
+while cap.isOpened():
+    # Read frame from the webcam
+    b, frame = cap.read()
 
-    <h2 align="center">Author:</h2>
+    # Preprocess frame: resize, convert to HSV
+    # ...
 
-    <p align="center">Mahmudul Haque Shawon</p>
+    # Apply color thresholding
+    # ...
 
-    <p align="center">
-        <a href="https://www.linkedin.com/in/mahmudulhaque600/">LinkedIn</a> |
-        <a href="https://web.facebook.com/profile.php?id=100076803278386">Facebook</a> |
-        <a href="mailto:haquemahmudul600@gmail.com">Gmail</a>
-    </p>
+    # Find contours and draw them
+    # ...
 
-</body>
-</html>
+    # Display images
+    # ...
+
+    # User interaction: press 'q' to exit
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        break
+
+# Release the webcam and close OpenCV windows
+cap.release()
+cv2.destroyAllWindows()
+<p>This approach provides a simple yet effective means of visually isolating specific colors from an input image in real-time.</p>
+
+
+<pre>
+&lt;h2 align="center"&gt;Author:&lt;/h2&gt;
+&lt;h6 align="center"&gt;Mahmudul Haque Shawon:&lt;/h6&gt;
+&lt;p align="center"&gt;&lt;a href="https://www.linkedin.com/in/mahmudulhaque600/"&gt;Linkedin&lt;/a&gt;&lt;/p&gt;
+&lt;p align="center"&gt;&lt;a href="https://web.facebook.com/profile.php?id=100076803278386"&gt;Facebook&lt;/a&gt;&lt;/p&gt;
+&lt;p align="center"&gt;&lt;a href="haquemahmudul600@gmail.com"&gt;Gmail&lt;/a&gt;&lt;/p&gt;
+</pre>
+
