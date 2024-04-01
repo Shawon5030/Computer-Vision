@@ -74,11 +74,11 @@ cv2.destroyAllWindows()
 <p>This approach provides a simple yet effective means of visually isolating specific colors from an input image in real-time.</p>
 
 
-<pre>
-&lt;h2 align="center"&gt;Author:&lt;/h2&gt;
-&lt;h6 align="center"&gt;Mahmudul Haque Shawon:&lt;/h6&gt;
-&lt;p align="center"&gt;&lt;a href="https://www.linkedin.com/in/mahmudulhaque600/"&gt;Linkedin&lt;/a&gt;&lt;/p&gt;
-&lt;p align="center"&gt;&lt;a href="https://web.facebook.com/profile.php?id=100076803278386"&gt;Facebook&lt;/a&gt;&lt;/p&gt;
-&lt;p align="center"&gt;&lt;a href="haquemahmudul600@gmail.com"&gt;Gmail&lt;/a&gt;&lt;/p&gt;
-</pre>
+<h2 align="center">Author:</h2>
+<h6 align="center">Mahmudul Haque Shawon:</h6>
+<p align="center"><a href="https://www.linkedin.com/in/mahmudulhaque600/">Linkedin</a></p>
+<p align="center"><a href="https://web.facebook.com/profile.php?id=100076803278386">Facebook</a></p>
+<p align="center"><a href="haquemahmudul600@gmail.com">Gmail</a></p>
+```
+```
 
