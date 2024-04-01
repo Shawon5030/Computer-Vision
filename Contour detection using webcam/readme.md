@@ -3,45 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-time Contour Detection using Webcam</title>
+    <title>Real-time HSV Color Thresholding using OpenCV</title>
 </head>
 <body>
-    <h1>Real-time Contour Detection using Webcam</h1>
-    <p>This Python script demonstrates real-time contour detection using a webcam. It utilizes OpenCV for video capture and image processing.</p>
+    <h1 align="center">Real-time HSV Color Thresholding using OpenCV</h1>
 
-    <h2>Requirements</h2>
+    <p align="center">
+        <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python">
+        <img src="https://img.shields.io/badge/Made%20with-OpenCV-9cf.svg" alt="Made with OpenCV">
+        <img src="https://img.shields.io/badge/Made%20with-Numpy-blue.svg" alt="Made with Numpy">
+    </p>
+
+    <p align="center">This Python script enables real-time color thresholding in the HSV color space using OpenCV. Users can interactively adjust lower and upper HSV thresholds using trackbars to filter out specific colors from an input image.</p>
+
+    <h2 align="center">Examples</h2>
+
+    <div align="center">
+        <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/94fe8ff4-e2c3-4725-af55-0bda514ac7fe" width="200" height="200">
+        <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/d9a3b633-063f-4836-971b-f8951cc1f03c" width="200" height="200">
+        <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/cf6907c8-8216-4faa-85f8-649a692bc164" width="200" height="200">
+        <img src="https://github.com/Shawon5030/Computer-Vision/assets/149573785/57cc3e3e-c93b-488f-ae22-0b0e4725c55d" width="200" height="200">
+    </div>
+
+    <h2 align="center">How it Works</h2>
+
+    <p align="center">The script utilizes the OpenCV library to perform real-time color thresholding in the HSV (Hue, Saturation, Value) color space. For a detailed explanation, refer to the <a href="#how-it-works">How it Works</a> section in the code repository.</p>
+
+    <h2 align="center">Requirements</h2>
+
     <ul>
-        <li>Python</li>
+        <li>Python 3.x</li>
         <li>OpenCV</li>
-        <li>NumPy</li>
+        <li>Numpy</li>
     </ul>
 
-    <h2>Usage</h2>
+    <h2 align="center">Installation</h2>
+
     <ol>
         <li>Clone the repository.</li>
-        <li>Make sure you have Python installed on your system.</li>
-        <li>Install the required libraries using pip:</li>
+        <li>Make sure you have Python 3.x installed on your system.</li>
+        <li>Install OpenCV and Numpy using pip:</li>
     </ol>
 
     <pre><code>pip install opencv-python numpy</code></pre>
 
-    <ol start="4">
-        <li>Run the script using the following command:</li>
+    <h2 align="center">How it Works</h2>
+    <p>The script utilizes the OpenCV library to perform real-time color thresholding in the HSV (Hue, Saturation, Value) color space. Here's a step-by-step explanation of its functionality:</p>
+
+    <ol>
+        <li><strong>Input Image:</strong> The script reads an input image from the file system.</li>
+        <li><strong>Trackbars Creation:</strong> It creates trackbars for adjusting the lower and upper thresholds of the HSV color space. These trackbars allow users to dynamically adjust the filtering criteria for isolating specific colors.</li>
+        <li><strong>HSV Conversion:</strong> The input image is converted from the BGR color space to the HSV color space using the <code>cv2.cvtColor()</code> function. This conversion is necessary because the HSV color space is more suitable for color thresholding tasks.</li>
+        <li><strong>Thresholding:</strong> The script continuously updates the HSV image, mask, and resulting image based on the threshold values adjusted using the trackbars. It uses the <code>cv2.inRange()</code> function to create a binary mask that isolates pixels within the specified HSV range.</li>
+        <li><strong>Bitwise AND Operation:</strong> The binary mask obtained from thresholding is applied to the original input image using the <code>cv2.bitwise_and()</code> function. This operation retains only those pixels from the original image that fall within the specified HSV range, effectively filtering out unwanted colors.</li>
+        <li><strong>Real-time Visualization:</strong> Throughout the process, the script displays the HSV image, mask, and resulting image in separate windows using <code>cv2.imshow()</code>. Users can observe the effects of adjusting the trackbars in real-time.</li>
+        <li><strong>User Interaction:</strong> The script waits for the user to press the 'q' key to exit the loop and terminate the program. This allows users to adjust the thresholds until they achieve the desired color segmentation.</li>
     </ol>
 
-    <pre><code>python contour_detection.py</code></pre>
+    <p>This approach provides a simple yet effective means of visually isolating specific colors from an input image in real-time.</p>
 
-    <p>Adjust the trackbars to manipulate the HSV values and threshold for contour detection.</p>
+    <h2 align="center">Author:</h2>
 
-    <h2>Description</h2>
-    <ul>
-        <li>The script captures frames from the webcam and processes them for contour detection.</li>
-        <li>Trackbars are provided for adjusting the lower and upper HSV values, as well as the threshold for contour detection.</li>
-        <li>Contours and convex hulls are drawn on the frame in real-time based on the detected objects.</li>
-    </ul>
+    <p align="center">Mahmudul Haque Shawon</p>
 
-    <h2>License</h2>
-    <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+    <p align="center">
+        <a href="https://www.linkedin.com/in/mahmudulhaque600/">LinkedIn</a> |
+        <a href="https://web.facebook.com/profile.php?id=100076803278386">Facebook</a> |
+        <a href="mailto:haquemahmudul600@gmail.com">Gmail</a>
+    </p>
+
 </body>
 </html>
-
